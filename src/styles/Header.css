@@ -1,43 +1,41 @@
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
     padding: 1rem 2rem;
-    background: #000;
-    /* or any color you want */
+    background-color: #000;
+    /* Adjust the color to fit your design */
     color: #fff;
 }
 
-.header-nav .nav-link {
+.nav-link {
     color: #fff;
     text-decoration: none;
-    margin-right: 2rem;
-    padding: 0.5rem 0;
-    border-bottom: 3px solid transparent;
-    /* no border by default */
+    margin: 0 1rem;
 }
 
-.header-nav .nav-link:hover,
-.header-nav .nav-link-active {
-    border-bottom-color: #ff0000;
-    /* active/hover color */
+.nav-link:hover,
+.nav-link-active {
+    color: #ff4757;
+    /* Active link color */
 }
 
 .header-social {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
 }
 
-.btn-buy {
-    background: #ff0000;
-    /* Button background color */
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
 
-.btn-buy:hover {
-    background: #e60000;
-    /* Darker background on hover */
+    .nav-link {
+        margin-bottom: 1rem;
+    }
+
+    .header-social {
+        order: -1;
+        /* This will move social links to the top on small screens */
+    }
 }

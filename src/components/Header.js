@@ -11,10 +11,7 @@ const Header = () => {
         <NavLink to="/resume" className="nav-link" activeClassName="nav-link-active">Resume</NavLink>
         <NavLink to="/portfolio" className="nav-link" activeClassName="nav-link-active">Portfolio</NavLink>       
       </nav>
-      <div className="header-social">
-        {/* Social links can go here */}
-        <button className="btn-buy">Buy Now</button>
-      </div>
+      
     </header>
   );
 };

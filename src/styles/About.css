@@ -1,11 +1,12 @@
 .about-page {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    max-width: 1600px;
+   
+    
     margin: auto;
     padding: 2rem;
-    background: #8b8888;
-    color: #333;
+    background: linear-gradient(135deg, #1c1c1c 50%, #343434 50%);
+        /* or any other dark shade */
+        color: #ffffff;
 }
 
 .about-section {

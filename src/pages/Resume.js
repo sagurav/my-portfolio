@@ -4,6 +4,7 @@ import profilePicture from "../assests/Profile.jpg";
 
 const Resume = () => {
   return (
+    <div className="resume">
     <div className="resume-container">
       <aside className="sidebar">
         <img
@@ -125,6 +126,7 @@ const Resume = () => {
           <li>1 ACE - Associates Consistently Excel </li>
         </section>
       </main>
+    </div>
     </div>
   );
 };

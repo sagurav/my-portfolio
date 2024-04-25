@@ -1,123 +1,123 @@
 .home {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #fff;
+    justify-content: space-between;
     background: linear-gradient(135deg, #1c1c1c 50%, #343434 50%);
-    /* attractive gradient background */
-    height: 100vh;
-    padding: 2rem;
-    box-sizing: border-box;
+    /* or any other dark shade */
+    color: #ffffff;
+    padding: 50px;
+    height: auto;
+    /* Adjust as per your design needs */
 }
 
-.home-text {
-    max-width: 50%;
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    /* Adjust gap between icons as needed */
 }
 
-.home-text h1 {
-    font-size: 3rem;
-    color: #ff4757;
-    /* Bright color for emphasis */
+.social-icons a {
+    color: #ffffff;
+    /* White color for icons */
+    font-size: 24px;
+    /* Size of icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #73bbe5;
+    /* Color change on hover */
+}
+
+.section-link {
+    text-decoration: underline;
+    
+    /* Removes the underline from links */
+    color: inherit;
+    /* Ensures the link has the same color as the text */
+}
+
+.section-link h2 {
+    cursor: pointer;
+    /* Changes the cursor to signify clickable items */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.section-link h2:hover {
+    color: #0277bd;
+    /* Change color on hover */
+}
+
+/* ... rest of your CSS */
+
+.left-column,
+.right-column {
+    flex-basis: 50%;
+}
+.left-column{
+    height: 60rem;
+}
+
+.left-column h2 {
     margin-bottom: 0.5rem;
 }
 
-.home-text h2 {
-    font-size: 2rem;
-    font-weight: normal;
-    margin-bottom: 1rem;
-}
-
-.home-text p {
-    font-size: 1.25rem;
-}
-
-.name {
-    color: #70a1ff;
-    /* Highlight color for the name */
-}
-
-.home-profile-picture {
-    max-width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.left-column p {
+    margin-bottom: 2rem;
 }
 
 .home-profile-picture img {
-    width: auto;
-    /* maintain aspect ratio */
+    width: 300px;
+    /* Adjust the size as needed */
     height: 300px;
-    /* fixed height, adjust as necessary */
     border-radius: 50%;
-    /* circular image */
-    border: 6px solid #fff;
-    /* white border for the image */
+    /* Circular image */
+    border: 4px solid #fff;
+    /* White border around the image */
     object-fit: cover;
-    /* ensures the image is covered */
 }
 
-.profile-picture {
-    /* Adjust the width and height as needed */
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    /* Makes the image round */
-    object-fit: cover;
-    /* Ensures the image covers the area without stretching */
-    border: 4px solid white;
-    /* Optional: Adds a white border around the image */
+.intro-text {
+    text-align: right;
+    /* Aligns text to the right */
 }
 
-/* You can adjust the layout using flexbox on the container */
-.home-profile-picture {
-    /* This will center the image horizontally in the flex container */
-    justify-content: center;
-    /* This will center the image vertically in the flex container */
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    /* Stack items vertically */
+.intro-text h1 {
+    font-size: 3rem;
+    /* Adjust as needed */
+    margin-bottom: 1rem;
 }
 
-/* Add responsive design */
-@media (max-width: 768px) {
-    .home-profile-picture {
-        /* Stack text and image vertically on smaller screens */
-        flex-direction: column;
-    }
-
-    .profile-picture {
-        width: 150px;
-        height: 150px;
-        /* Adjust margin as needed for smaller screens */
-        margin-top: 20px;
-    }
+.intro-text p {
+    margin-bottom: 2rem;
 }
 
-/* Media query for responsive adjustments */
+
+
+/* Add responsiveness for smaller screens */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
+        text-align: center;
+        /* Center align for mobile view */
     }
 
-    .home-text,
-    .home-profile-picture {
-        max-width: 100%;
+    .left-column,
+    .right-column {
+        flex-basis: 100%;
     }
 
+    .intro-text {
+        text-align: center;
+        /* Center align for mobile view */
+    }
+
+    /* Adjust image size on smaller screens */
     .home-profile-picture img {
+        width: 200px;
         height: 200px;
-        /* smaller image for mobile */
     }
-         .home-profile-picture {
-             /* Stack text and image vertically on smaller screens */
-             flex-direction: column;
-         }
-    
-         .profile-picture {
-             width: 150px;
-             height: 150px;
-             /* Adjust margin as needed for smaller screens */
-             margin-top: 20px;
-         }
 }

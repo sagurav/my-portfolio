@@ -16,7 +16,7 @@ Portfolio: A dynamic display of my software projects fetched from my GitHub repo
 - React.js
 - HTML
 - CSS
-- JavaScript (ES6+)
+- JavaScript
 
 ## Features
 
@@ -29,10 +29,10 @@ Portfolio: A dynamic display of my software projects fetched from my GitHub repo
 To run the portfolio website locally, follow these steps:
 
 1. Clone the repository:
-   git clone https://github.com/sagurav/portfolio-website.git
+   git clone https://github.com/sagurav/my-portfolio.git
 
 2. Navigate to the project directory:
-   cd portfolio-website
+   cd my-portfolio
 
 3. Install the dependencies:
    npm install

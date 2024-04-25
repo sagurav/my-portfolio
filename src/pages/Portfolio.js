@@ -13,6 +13,7 @@ const Portfolio = () => {
   }, []);
 
   return (
+    <div className="portfolio">
     <div className="portfolio-container">
       <div className="profile-section">
         <img src={profilePic} alt="Suraj Adhikrao Gurav" className="profile-pic" />
@@ -27,6 +28,7 @@ const Portfolio = () => {
               <li key={repo.id} className="repo-item">
                 <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                   {repo.name}
+                   
                 </a>
               </li>
             ))}
@@ -43,6 +45,7 @@ const Portfolio = () => {
           </ul>
         </section>
       </div>
+    </div>
     </div>
   );
 };
