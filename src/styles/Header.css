@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #000;
+    /* or any color you want */
+    color: #fff;
+}
+
+.header-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+    /* no border by default */
+}
+
+.header-nav .nav-link:hover,
+.header-nav .nav-link-active {
+    border-bottom-color: #ff0000;
+    /* active/hover color */
+}
+
+.header-social {
+    display: flex;
+    align-items: center;
+}
+
+.btn-buy {
+    background: #ff0000;
+    /* Button background color */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background: #e60000;
+    /* Darker background on hover */
+}
