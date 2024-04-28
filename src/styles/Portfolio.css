@@ -1,133 +1,131 @@
 .portfolio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background: linear-gradient(135deg, #1c1c1c 50%, #343434 50%);
-    min-height: 100vh;
-    padding: 2rem;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #1c1c1c 50%, #343434 50%);
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .portfolio-container {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-section {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
 }
 
 .profile-section h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .repo-section h2,
 .video-section h2 {
-    font-size: 1.5rem;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .repo-list,
 .video-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
 }
 
 .repo-item a,
 .video-item a {
-    color: #007bff;
+  color: #007bff;
 
-    text-decoration: none;
-    transition: color 0.3s;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .repo-item a:hover,
 .video-item a:hover {
-    color: #0056b3;
-    
-    text-decoration: underline;
-   
+  color: #0056b3;
+
+  text-decoration: underline;
 }
 
-
 .search-input {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: 2px solid #007bff;
-    /* Matching the link color */
-    border-radius: 5px;
-    width: 100%;
-    max-width: 400px;
-    /* Limiting the width of the search bar */
-    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
-    /* Subtle shadow for depth */
-    margin-bottom: 20px;
-    /* Spacing from search bar to content */
-    outline: none;
-    /* Removes the default focus outline */
-    transition: border-color 0.3s, box-shadow 0.3s;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  /* Matching the link color */
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  /* Limiting the width of the search bar */
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+  /* Subtle shadow for depth */
+  margin-bottom: 20px;
+  /* Spacing from search bar to content */
+  outline: none;
+  /* Removes the default focus outline */
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .search-input:focus {
-    border-color: #0056b3;
-    /* Darker blue when focused */
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-    /* Larger shadow on focus for emphasis */
+  border-color: #0056b3;
+  /* Darker blue when focused */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  /* Larger shadow on focus for emphasis */
 }
 
 .search-input::placeholder {
-    color: #ccc;
-    /* Light grey placeholder text */
+  color: #ccc;
+  /* Light grey placeholder text */
 }
 
 @media (max-width: 768px) {
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
 
-        @media (max-width: 768px) {
-            .search-input {
-                width: 90%;
-                margin-bottom: 15px;
-            }
-        }
-
-    .profile-section h1 {
-        font-size: 1.75rem;
+  @media (max-width: 768px) {
+    .search-input {
+      width: 90%;
+      margin-bottom: 15px;
     }
+  }
 
-    .repo-section h2,
-    .video-section h2 {
-        font-size: 1.25rem;
-    }
+  .profile-section h1 {
+    font-size: 1.75rem;
+  }
 
-    .portfolio-container {
-        padding: 1rem;
-    }
+  .repo-section h2,
+  .video-section h2 {
+    font-size: 1.25rem;
+  }
 
-    .profile-section,
-    .repo-section,
-    .video-section {
-        margin-bottom: 1rem;
-    }
+  .portfolio-container {
+    padding: 1rem;
+  }
+
+  .profile-section,
+  .repo-section,
+  .video-section {
+    margin-bottom: 1rem;
+  }
 }
