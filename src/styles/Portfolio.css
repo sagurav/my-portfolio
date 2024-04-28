@@ -71,30 +71,22 @@
   padding: 10px 20px;
   font-size: 1rem;
   border: 2px solid #007bff;
-  /* Matching the link color */
   border-radius: 5px;
   width: 100%;
   max-width: 400px;
-  /* Limiting the width of the search bar */
   box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
-  /* Subtle shadow for depth */
   margin-bottom: 20px;
-  /* Spacing from search bar to content */
   outline: none;
-  /* Removes the default focus outline */
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .search-input:focus {
   border-color: #0056b3;
-  /* Darker blue when focused */
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-  /* Larger shadow on focus for emphasis */
 }
 
 .search-input::placeholder {
   color: #ccc;
-  /* Light grey placeholder text */
 }
 
 @media (max-width: 768px) {
