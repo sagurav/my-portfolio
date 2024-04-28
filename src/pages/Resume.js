@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Resume.css"; // Make sure to create and link this new CSS file
+import "../styles/Resume.css"; 
 import profilePicture from "../assests/Profile.jpg";
 
 const Resume = () => {

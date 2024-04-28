@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
-import profilePicture from "../assests/Profile.jpg"; // Ensure the path to your image is correct
+import profilePicture from "../assests/Profile.jpg"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -16,7 +16,7 @@ const Home = () => {
       <div className="left-column">
         <h2>About Me</h2>
         <p>
-          Blending code with chords and sprints, <br />I am a software engineer
+          Blending code with chords and sprints, <br />I'm a software engineer
           whose rhythm flows through <br />
           both innovative tech solutions and the vibrant
           <br />
@@ -28,9 +28,9 @@ const Home = () => {
 
         <h2>Professional Profile</h2>
         <p>
-          Take a moment to explore my resume <br />
+          Take a moment to explore my resume, <br />
           where my passion for technology and dedication to <br />
-          excellence are vividly captured in every detail
+          excellence are vividly captured in every detail.
         </p>
         <Link to="/resume" className="section-link">
           Learn more
@@ -39,10 +39,10 @@ const Home = () => {
         <h2>My Work</h2>
         <p>
           Crafting digital canvases with the same fervor as a maestro wields his
-          baton <br />
-          I am a passionate software engineer dedicated to <br />
+          baton. <br />
+          I'm a passionate software engineer dedicated to <br />
           sculpting the future of web development with every <br />
-          line of code I writes.
+          line of code I write.
         </p>
         <Link to="/portfolio" className="section-link">
           Learn more
@@ -93,6 +93,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

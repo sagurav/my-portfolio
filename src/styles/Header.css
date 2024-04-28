@@ -1,41 +1,74 @@
 .header {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding: 1rem 2rem;
     background-color: #000;
-    /* Adjust the color to fit your design */
     color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
     color: #fff;
     text-decoration: none;
     margin: 0 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
 }
 
 .nav-link:hover,
 .nav-link-active {
-    color: #ff4757;
-    /* Active link color */
+    border-bottom: 3px solid #ff4757;
 }
 
 .header-social {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Responsive design for smaller screens */
+.social-icon {
+    margin: 0 0.5rem;
+    color: #fff;
+    text-decoration: none;
+   
+}
+
+.social-icon:hover {
+    color: #ff4757;
+}
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
     }
 
     .nav-link {
+        width: 100%;
         margin-bottom: 1rem;
+
     }
 
     .header-social {
-        order: -1;
-        /* This will move social links to the top on small screens */
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+
+    .social-icon {
+        margin: 0 0.5rem 0 0;
     }
 }
