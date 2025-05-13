@@ -55,5 +55,5 @@ Contributions to improve the portfolio are welcome. Please follow these steps to
 ## Contact Information
 
 Name: Suraj Adhikrao Gurav
-Email: surajad
+Email: sagurav0104@gmail.com
 LinkedIn:https://www.linkedin.com/in/suraj-adhikrao-gurav/

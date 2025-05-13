@@ -1,7 +1,12 @@
+/* Core App styles */
 .App {
   text-align: center;
+  background: #1c1c1c;
+  color: white;
+  overflow-x: hidden;
 }
 
+/* Animated logo (optional) */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,8 +18,19 @@
   }
 }
 
+/* Section cards like SDLC / Experience */
+.sdlc-card {
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.sdlc-card:hover {
+  border: 1px solid #66b2ff;
+  transform: scale(1.01);
+}
+
+/* Header section */
 .App-header {
-  background-color: #282c34;
+  background-color: #1c1c1c;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +40,71 @@
   color: white;
 }
 
+/* App link styles */
 .App-link {
-  color: #61dafb;
+  color: #66ccff;
+  text-decoration: underline;
 }
 
+.App-link:hover {
+  color: #ffffff;
+}
+
+/* Profile picture border enhancements */
+.home-profile-picture img {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Flex Layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Home layout responsiveness */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 5%;
+  overflow-x: hidden;
+}
+
+.left-column,
+.right-column {
+  flex: 1 1 400px;
+  max-width: 50%;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+
+  .left-column,
+  .right-column {
+    max-width: 100%;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .home-profile-picture img {
+    width: 150px;
+    height: 150px;
   }
 }

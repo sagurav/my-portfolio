@@ -1,38 +1,70 @@
 import React from 'react';
 import '../styles/About.css';
-import profilePicture from '../assests/ProfileImageABT.jpg'; 
-import hobby1 from '../assests/hobby1.jpg'; 
-import hobby2 from '../assests/hobby2.jpg';
-import hobby3 from '../assests/hobby3.jpg';
+import profilePicture from '../assests/ProfileImageABT.jpg';
 
 const About = () => {
   return (
-    <div className="about-page">
-      <section className="about-section">
-        <div className="about-content">
-          <h1>so WHO Am I?</h1>
-          <p>Venturing through the dynamic landscape of technology, I, Suraj Adhikrao Gurav, stand at the helm of technical innovation as a leader of the technical integration team.</p>
+    <div style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      padding: '60px 5%',
+      background: 'linear-gradient(135deg, #1c1c1c 50%, #2b2b2b 50%)',
+      fontFamily: 'Segoe UI, sans-serif',
+      color: '#f1f1f1'
+    }}>
+      {/* LEFT COLUMN - IMAGE + NAME */}
+      <div style={{ flex: '1 1 400px', maxWidth: '500px', paddingRight: '40px' }}>
+        <img
+          src={profilePicture}
+          alt="Suraj Adhikrao Gurav"
+          style={{
+            width: '100%',
+            borderRadius: '50%',
+            border: '4px solid #fff',
+            boxShadow: '0 6px 30px rgba(0,0,0,0.5)'
+          }}
+        />
+        <h1 style={{ marginTop: '20px', fontSize: '2rem', fontWeight: 'bold', textAlign: 'center' }}>
+          Suraj Adhikrao Gurav
+        </h1>
+        <h3 style={{ fontWeight: 'normal', color: '#ccc', textAlign: 'center' }}>Software Engineer | Data Engineer</h3>
+      </div>
 
+      {/* RIGHT COLUMN - ABOUT TEXT */}
+      <div style={{ flex: '1 1 500px', maxWidth: '600px' }}>
+        <h2 style={{
+          fontSize: '2rem',
+          fontWeight: 'bold',
+          borderBottom: '2px solid #66ccff',
+          display: 'inline-block',
+          marginBottom: '25px',
+          color: '#66ccff'
+        }}>
+          About Me
+        </h2>
 
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.9', marginBottom: '20px' }}>
+          I’m <strong>Suraj Adhikrao Gurav</strong>, a Software Engineer and Data Integration Lead with over 4.5 years of enterprise experience, spanning software development, full-stack solutions, data pipelines, and integration leadership.
+        </p>
 
-        <p>My journey began in the vast field of Electronics and Telecommunication, where my bachelor's degree from Mumbai University was not just a learning phase but a cornerstone for my future endeavors.
-Stepping confidently into the software realm, I have found my rhythm in the harmonious chaos of code, where I not only solve problems, but also craft digital experiences that resonate with users worldwide. With an inherent ability to navigate through complex development environments, I am equally at home orchestrating the symphony of a technical team as I am indulging in the solitary pursuit of perfecting a piece of code.</p>
-<p>My career path has been a testament to a relentless pursuit of excellence, marked by a tenure at Tech Mahindra - India where I've been honored with accolades like the ACE Award. But my identity transcends the bounds of the professional sphere.</p>
-<p>As a sports aficionado, I find the principles of cricket, volleyball, chess, carrom, and kabaddi to be akin to the methodologies of my work—strategy, precision, and a team-centric approach. Music threads through my life with the strings of a guitar and the rhythm of a Clapbox, fostering creativity that spills over into my technological craft.</p>
-<p>A fun-loving spirit, a happy demeanor, and a propensity to lend a helping hand defines my personal journey. For me, every sunrise heralds new opportunities to grow, to give, and to inspire. It's this rich tapestry of diverse interests and unyielding drive that shapes my narrative—both as a distinguished professional and an impassioned human</p>
-        </div>
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.9', marginBottom: '20px' }}>
+          I have successfully led end-to-end SDLC processes in Agile environments, built scalable backend and frontend applications with Java, Spring Boot, and Angular, and delivered BI systems using Pentaho (PDI, PRD, CDE).
+        </p>
 
-        
-        <div className="about-images">
-          <img src={profilePicture} alt="Suraj Adhikrao Gurav" className="profile-img" />
-        </div>
-      </section>
-        <h1>May Be I'm Good At !!!!</h1>
-      <div className="hobbies-gallery">
-        <img src={hobby1} alt="Hobby 1" className="hobby-img" />
-        <img src={hobby2} alt="Hobby 2" className="hobby-img" />
-        <img src={hobby3} alt="Hobby 3" className="hobby-img" />
-    
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.9', marginBottom: '20px' }}>
+          My core strength lies in <strong>data engineering</strong> — from crafting complex ETL workflows and data migration strategies, to developing optimized SQL/PLSQL scripts for real-time reporting. I've built secure, scalable cloud architectures on AWS (EC2, ECS, S3, API Gateway, CloudFront) and led DevOps pipelines using Jenkins and Ansible.
+        </p>
+
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.9', marginBottom: '20px' }}>
+          I recently earned my <strong>Master’s in IT (Software Development)</strong> from QUT with Dean’s Commendation, and led a capstone project designing a production-grade video compressor app using React and AWS microservices.
+        </p>
+
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.9' }}>
+          Beyond the keyboard, I bring the same energy to cricket, carrom, and guitar strings as I do to server logs and dashboards. Let's build something impactful — with code that scales and solutions that matter.
+        </p>
       </div>
     </div>
   );

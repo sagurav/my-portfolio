@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Portfolio.css';
-import profilePic from "../assests/Profile.jpg";  
+import profilePic from "../assests/Profile.jpg";
 
 const Portfolio = () => {
   const [repos, setRepos] = useState([]);
@@ -19,21 +19,48 @@ const Portfolio = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
+        // Fetch GitHub Repos
         const repoResponse = await fetch(`https://api.github.com/users/sagurav/repos`, {
-          headers: { Authorization: `Bearer ${githubApiKey}` }
+          headers: githubApiKey ? { Authorization: `Bearer ${githubApiKey}` } : {}
         });
         const repoData = await repoResponse.json();
-        setRepos(repoData);
-        setAllRepos(repoData);
+        console.log("GitHub Response:", repoData);
 
-        const youtubeResponse = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,statistics&id=${youtubeChannelId}&key=${youtubeApiKey}`);
+        if (Array.isArray(repoData)) {
+          setRepos(repoData);
+          setAllRepos(repoData);
+        } else {
+          setRepos([]);
+          setAllRepos([]);
+          console.error("GitHub response is not an array");
+        }
+
+        // Fetch YouTube Channel Uploads Playlist
+        const youtubeResponse = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${youtubeChannelId}&key=${youtubeApiKey}`);
         const youtubeData = await youtubeResponse.json();
-        const playlistId = youtubeData.items[0].contentDetails.relatedPlaylists.uploads;
-        const videosResponse = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${youtubeApiKey}`);
-        const videosData = await videosResponse.json();
-        setVideos(videosData.items);
-        setAllVideos(videosData.items);
+        console.log("YouTube Channel Response:", youtubeData);
+
+        if (youtubeData.items && youtubeData.items[0]?.contentDetails?.relatedPlaylists?.uploads) {
+          const playlistId = youtubeData.items[0].contentDetails.relatedPlaylists.uploads;
+
+          const videosResponse = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=${playlistId}&key=${youtubeApiKey}`);
+          const videosData = await videosResponse.json();
+          console.log("YouTube Videos Response:", videosData);
+
+          if (Array.isArray(videosData.items)) {
+            setVideos(videosData.items);
+            setAllVideos(videosData.items);
+          } else {
+            setVideos([]);
+            setAllVideos([]);
+            console.error("YouTube videos response is not an array");
+          }
+        } else {
+          setVideos([]);
+          setAllVideos([]);
+        }
       } catch (error) {
+        console.error("Fetch Error:", error);
         setError('An error occurred: ' + error.message);
       }
       setLoading(false);
@@ -45,10 +72,8 @@ const Portfolio = () => {
   const handleSearch = event => {
     const value = event.target.value.toLowerCase();
     setSearchTerm(value);
-    const filteredRepos = allRepos.filter(repo => repo.name.toLowerCase().includes(value));
-    const filteredVideos = allVideos.filter(video => video.snippet.title.toLowerCase().includes(value));
-    setRepos(filteredRepos);
-    setVideos(filteredVideos);
+    setRepos(allRepos.filter(repo => repo.name.toLowerCase().includes(value)));
+    setVideos(allVideos.filter(video => video.snippet.title.toLowerCase().includes(value)));
   };
 
   if (loading) return <div className="loading">Loading...</div>;
@@ -62,6 +87,7 @@ const Portfolio = () => {
           <h1>Suraj Adhikrao Gurav</h1>
           <p>Software Engineering Professional</p>
         </div>
+
         <input
           type="text"
           className="search-input"
@@ -69,30 +95,40 @@ const Portfolio = () => {
           value={searchTerm}
           onChange={handleSearch}
         />
+
         <div className="portfolio-content">
           <section className="repo-section">
             <h2>GitHub Repositories</h2>
-            <ul className="repo-list">
-              {repos.map(repo => (
-                <li key={repo.id} className="repo-item">
-                  <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                    {repo.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {repos.length > 0 ? (
+              <ul className="repo-list">
+                {repos.map(repo => (
+                  <li key={repo.id} className="repo-item">
+                    <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                      {repo.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No repositories found.</p>
+            )}
           </section>
+
           <section className="video-section">
             <h2>YouTube Videos</h2>
-            <ul className="video-list">
-              {videos.map(video => (
-                <li key={video.snippet.resourceId.videoId} className="video-item">
-                  <a href={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`} target="_blank" rel="noopener noreferrer">
-                    {video.snippet.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {videos.length > 0 ? (
+              <ul className="video-list">
+                {videos.map(video => (
+                  <li key={video.snippet.resourceId.videoId} className="video-item">
+                    <a href={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`} target="_blank" rel="noopener noreferrer">
+                      {video.snippet.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No videos found.</p>
+            )}
           </section>
         </div>
       </div>
