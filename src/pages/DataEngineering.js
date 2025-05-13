@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import '../styles/Home.css';
+import '../styles/DataEngineering.css';
 
 const experiences = [
   {
@@ -52,17 +52,17 @@ const experiences = [
 
 const education = [
   {
-    label: '✅ Completed Master of Information Technology – QUT',
+    label: 'Completed Master of Information Technology – QUT',
     title: 'Master of IT – QUT (Software Development)',
     details: 'Hands-on with Tableau, Python (Jupyter), AWS, and real-world datasets. Conducted AI + Blockchain Integration Research focused on healthcare automation and transparency. Created Garden Guru App using React Native and AI prototype functionalities.'
   },
   {
-    label: '✅ Google Data Analytics Certification (2024)',
+    label: 'Google Data Analytics Certification (2024)',
     title: 'Google Data Analytics Certification (2024)',
     details: 'Acquired strong skills in data wrangling, SQL, R, and Excel. Gained analytical problem-solving mindset for transforming data into insights. Completed hands-on labs in data analysis, cleaning, and business reporting.'
   },
   {
-    label: '✅ Power BI Data Analyst Certification (Pursuing)',
+    label: 'Power BI Data Analyst Certification (Pursuing)',
     title: 'Power BI Data Analyst (In Progress)',
     details: 'Learning to build enterprise dashboards, write DAX queries, and use Power BI visuals to narrate impactful business stories through data. Proficient in using Power Query, Filters, and Report publishing tools.'
   }
@@ -74,92 +74,44 @@ const DataEngineering = () => {
   return (
     <motion.div className="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
       <div className="left-column">
-        <h1 style={{ color: '#ffffff' }}>Data Engineering</h1>
+        <h1 style={{ color: '#ffffff' }}>Data Engineering and Data Analytics</h1>
         <p style={{ color: '#cccccc' }}>LIC ePGS Project – Full Lifecycle | Education & Certification Journey</p>
       </div>
 
-      <div className="right-column" style={{ display: 'flex', flexDirection: 'column', gap: '30px', padding: '20px', justifyContent: 'center', alignItems: 'center' }}>
-        
+      <div className="software-container">
         {/* Experience Block */}
-        <motion.div
-          className="sdlc-card"
-          style={{
-            width: '90%',
-            backgroundColor: '#1f2633',
-            padding: '25px',
-            borderRadius: '12px',
-            color: '#fff',
-            boxShadow: '0 5px 14px rgba(0,0,0,0.3)'
-          }}
-        >
-          <h3 style={{ fontWeight: 'bold', color: '#00ffaa' }}>Key Contributions – Professional Experience</h3>
+        <motion.div className="sdlc-card">
+          <h3 style={{ color: '#00ffaa' }}>Key Contributions – Professional Experience</h3>
           <p style={{ fontStyle: 'italic', color: '#aaa' }}>Tech Mahindra – LIC ePGS Project | 2019–2024</p>
-          <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <div className="list-block">
             {experiences.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => setModalContent(item)}
-                style={{ cursor: 'pointer', color: '#ffffff' }}
-              >
-                ✅ <span style={{ textDecoration: 'underline' }}>{item.label}</span>
+              <div key={index} onClick={() => setModalContent(item)} className="list-item">
+                <span className="tick">✅</span>
+                <span className="label-text">{item.label}</span>
               </div>
             ))}
           </div>
         </motion.div>
 
         {/* Education Block */}
-        <motion.div
-          className="sdlc-card"
-          style={{
-            width: '90%',
-            backgroundColor: '#1f2633',
-            padding: '25px',
-            borderRadius: '12px',
-            color: '#fff',
-            boxShadow: '0 5px 14px rgba(0,0,0,0.3)'
-          }}
-        >
-          <h3 style={{ fontWeight: 'bold', color: '#66b2ff' }}>Education – Data Engineering Track</h3>
-          <div style={{ marginTop: '15px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+        <motion.div className="sdlc-card">
+          <h3 style={{ color: '#66b2ff' }}>Education – Data Engineering Track</h3>
+          <div className="list-block">
             {education.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => setModalContent(item)}
-                style={{ cursor: 'pointer', color: '#ffffff' }}
-              >
-                <span style={{ textDecoration: 'underline' }}>{item.label}</span>
+              <div key={index} onClick={() => setModalContent(item)} className="list-item">
+                <span className="tick">✅</span>
+                <span className="label-text">{item.label}</span>
               </div>
             ))}
           </div>
         </motion.div>
 
-        {/* Combined Modal */}
+        {/* Modal */}
         {modalContent && (
-          <motion.div
-            className="modal"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            style={{
-              position: 'fixed',
-              top: '20%',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              background: '#333',
-              padding: '30px',
-              borderRadius: '10px',
-              zIndex: 9999,
-              color: '#fff',
-              width: '80%',
-              maxWidth: '600px',
-              boxShadow: '0 5px 20px rgba(0,0,0,0.5)'
-            }}
-          >
-            <h3 style={{ marginBottom: '10px', color: '#00ffaa' }}>{modalContent.title}</h3>
+          <motion.div className="modal" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}>
+            <h3>{modalContent.title}</h3>
             <p>{modalContent.details}</p>
-            <button onClick={() => setModalContent(null)} style={{ marginTop: '20px', backgroundColor: '#00ffaa', border: 'none', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer', color: '#000' }}>
-              Close
-            </button>
+            <button onClick={() => setModalContent(null)}>Close</button>
           </motion.div>
         )}
       </div>

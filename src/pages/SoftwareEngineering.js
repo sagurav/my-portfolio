@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import '../styles/Home.css';
+import '../styles/SoftwareEngineering.css';
 
 const softwarePoints = [
   {
@@ -32,17 +32,17 @@ const softwarePoints = [
 
 const projects = [
   {
-    label: '✅ Created web & mobile apps using React & React Native',
+    label: 'Created web & mobile apps using React & React Native',
     title: 'React and React Native Projects',
     details: 'Designed and developed responsive web pages and mobile applications using React and React Native. Demonstrated frontend UI/UX expertise while implementing RESTful API integration and reusable components.'
   },
   {
-    label: '✅ Delivered IT project using WordPress for a startup',
+    label: 'Delivered IT project using WordPress for a startup',
     title: 'WordPress Project for Startup',
     details: 'Built and delivered a complete business website for a new startup using WordPress. Customized themes, added functionality using plugins, and supported content and SEO optimization.'
   },
   {
-    label: '✅ Developed and deployed Video Compressor App on AWS',
+    label: 'Developed and deployed Video Compressor App on AWS',
     title: 'Video Compressor – React + AWS Architecture',
     details: 'Built a video compression platform using React, FFmpeg, and Node.js. Deployed using scalable AWS architecture with S3, EC2, ECS, Load Balancer, API Gateway, CloudFront, and IAM. Designed full DevOps and backend architecture independently.'
   }
@@ -58,55 +58,29 @@ const SoftwareEngineering = () => {
         <p style={{ color: '#cccccc' }}>LIC ePGS Project – Application Engineering & Education Experience</p>
       </div>
 
-      <div className="right-column" style={{ display: 'flex', flexDirection: 'column', gap: '30px', padding: '20px', justifyContent: 'center', alignItems: 'center' }}>
-        {/* Professional Experience */}
-        <motion.div
-          className="sdlc-card"
-          style={{
-            width: '90%',
-            backgroundColor: '#1f2633',
-            padding: '25px',
-            borderRadius: '12px',
-            color: '#fff',
-            boxShadow: '0 5px 14px rgba(0,0,0,0.3)'
-          }}
-        >
-          <h3 style={{ fontWeight: 'bold', color: '#00ffaa' }}>Key Contributions – Software Engineering Experience</h3>
+      <div className="software-container">
+        {/* Experience Block */}
+        <motion.div className="sdlc-card">
+          <h3 style={{ color: '#00ffaa' }}>Key Contributions – Software Engineering Experience</h3>
           <p style={{ fontStyle: 'italic', color: '#aaa' }}>Tech Mahindra – LIC ePGS Project | 2019–2024</p>
-          <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <div className="list-block">
             {softwarePoints.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => setModalContent(item)}
-                style={{ cursor: 'pointer', color: '#ffffff' }}
-              >
-                ✅ <span style={{ textDecoration: 'underline' }}>{item.label}</span>
+              <div key={index} onClick={() => setModalContent(item)} className="list-item">
+                <span className="tick">✅</span>
+                <span className="label-text">{item.label}</span>
               </div>
             ))}
           </div>
         </motion.div>
 
-        {/* Educational/Project Contributions */}
-        <motion.div
-          className="sdlc-card"
-          style={{
-            width: '90%',
-            backgroundColor: '#1f2633',
-            padding: '25px',
-            borderRadius: '12px',
-            color: '#fff',
-            boxShadow: '0 5px 14px rgba(0,0,0,0.3)'
-          }}
-        >
-          <h3 style={{ fontWeight: 'bold', color: '#66b2ff' }}>Software Projects & Education</h3>
-          <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+        {/* Project Block */}
+        <motion.div className="sdlc-card">
+          <h3 style={{ color: '#66b2ff' }}>Software Projects & Education</h3>
+          <div className="list-block">
             {projects.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => setModalContent(item)}
-                style={{ cursor: 'pointer', color: '#ffffff' }}
-              >
-                <span style={{ textDecoration: 'underline' }}>{item.label}</span>
+              <div key={index} onClick={() => setModalContent(item)} className="list-item">
+                <span className="tick">✅</span>
+                <span className="label-text">{item.label}</span>
               </div>
             ))}
           </div>
@@ -114,31 +88,10 @@ const SoftwareEngineering = () => {
 
         {/* Modal */}
         {modalContent && (
-          <motion.div
-            className="modal"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            style={{
-              position: 'fixed',
-              top: '20%',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              background: '#333',
-              padding: '30px',
-              borderRadius: '10px',
-              zIndex: 9999,
-              color: '#fff',
-              width: '80%',
-              maxWidth: '600px',
-              boxShadow: '0 5px 20px rgba(0,0,0,0.5)'
-            }}
-          >
-            <h3 style={{ marginBottom: '10px', color: '#00ffaa' }}>{modalContent.title}</h3>
+          <motion.div className="modal" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}>
+            <h3>{modalContent.title}</h3>
             <p>{modalContent.details}</p>
-            <button onClick={() => setModalContent(null)} style={{ marginTop: '20px', backgroundColor: '#00ffaa', border: 'none', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer', color: '#000' }}>
-              Close
-            </button>
+            <button onClick={() => setModalContent(null)}>Close</button>
           </motion.div>
         )}
       </div>

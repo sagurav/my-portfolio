@@ -71,3 +71,40 @@
         margin-bottom: 1rem;
     }
 }
+/* Add or update inside your existing media query */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .intro-text {
+        order: 2;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .home-profile-picture {
+        order: 1;
+        max-width: 200px;
+        margin: 0 auto 1rem auto;
+        /* Center horizontally */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-profile-picture img {
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .left-column h2,
+    .left-column p {
+        text-align: center;
+    } }

@@ -1,0 +1,56 @@
+.sdlc-heading {
+    color: #ffffff;
+}
+
+.sdlc-subtext {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #d1d1d1;
+}
+
+.sdlc-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sdlc-card {
+    flex: 1 1 28%;
+    min-width: 280px;
+    background-color: #2b2e3c;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.sdlc-title {
+    font-weight: bold;
+    color: #66b2ff;
+}
+
+.sdlc-period {
+    font-weight: 600;
+    color: #ccc;
+}
+
+.sdlc-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.sdlc-list-item {
+    margin-bottom: 8px;
+    color: #f0f0f0;
+}
+
+/* Optional responsive tweaks */
+@media (max-width: 768px) {
+    .sdlc-card {
+        flex: 1 1 90%;
+    }
+}

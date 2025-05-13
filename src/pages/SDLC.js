@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import '../styles/Home.css';
+import '../styles/SDLC.css';
 
 const phases = [
   {
     title: 'Requirement Gathering',
     period: 'Dec 2019 – May 2020',
     items: [
-      'Maandhan requirement gathering',
+      'Requirement gathering forfunctional streams',
       'Integration and reporting requirement gathering',
-      'Annuity requirement gathering',
+      'Annuity requirement gathering for extraction process and functional process',
       'Created SRS (Software requirement specification document)',
       'Created Wireframe using Mock flow',
     ]
@@ -64,36 +64,24 @@ const SDLC = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="left-column">
-        <h1 style={{ color: '#ffffff' }}>Software Development Life Cycle (SDLC)</h1>
-        <p style={{ marginTop: '10px', marginBottom: '20px', color: '#d1d1d1' }}>
+        <h1 className="sdlc-heading">Software Development Life Cycle (SDLC)</h1>
+        <p className="sdlc-subtext">
           A real-world breakdown of phases from requirement to deployment.
         </p>
       </div>
 
-      {/* Phase cards layout */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', padding: '20px' }}>
+      <div className="sdlc-container">
         {phases.map((phase, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
             className="sdlc-card"
-            style={{
-              flex: '1 1 28%',
-              minWidth: '280px',
-              backgroundColor: '#2b2e3c',
-              padding: '20px',
-              borderRadius: '10px',
-              color: '#fff',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-              transition: 'transform 0.3s ease',
-              cursor: 'pointer'
-            }}
           >
-            <h3 style={{ fontWeight: 'bold', color: '#66b2ff' }}>{phase.title}</h3>
-            <p style={{ fontWeight: '600', color: '#ccc' }}>{phase.period}</p>
-            <ol style={{ marginTop: '10px', paddingLeft: '20px' }}>
+            <h3 className="sdlc-title">{phase.title}</h3>
+            <p className="sdlc-period">{phase.period}</p>
+            <ol className="sdlc-list">
               {phase.items.map((item, idx) => (
-                <li key={idx} style={{ marginBottom: '8px', color: '#f0f0f0' }}>{item}</li>
+                <li key={idx} className="sdlc-list-item">{item}</li>
               ))}
             </ol>
           </motion.div>
