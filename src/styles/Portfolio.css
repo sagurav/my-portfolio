@@ -89,6 +89,13 @@
   color: #ccc;
 }
 
+.bullet {
+  color: #00ffaa;
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
   .profile-pic {
     width: 120px;

@@ -19,7 +19,6 @@ const Portfolio = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        // Fetch GitHub Repos
         const repoResponse = await fetch(`https://api.github.com/users/sagurav/repos`, {
           headers: githubApiKey ? { Authorization: `Bearer ${githubApiKey}` } : {}
         });
@@ -35,7 +34,6 @@ const Portfolio = () => {
           console.error("GitHub response is not an array");
         }
 
-        // Fetch YouTube Channel Uploads Playlist
         const youtubeResponse = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${youtubeChannelId}&key=${youtubeApiKey}`);
         const youtubeData = await youtubeResponse.json();
         console.log("YouTube Channel Response:", youtubeData);
@@ -103,6 +101,7 @@ const Portfolio = () => {
               <ul className="repo-list">
                 {repos.map(repo => (
                   <li key={repo.id} className="repo-item">
+                    <span className="bullet">•</span>
                     <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                       {repo.name}
                     </a>
@@ -120,6 +119,7 @@ const Portfolio = () => {
               <ul className="video-list">
                 {videos.map(video => (
                   <li key={video.snippet.resourceId.videoId} className="video-item">
+                    <span className="bullet">•</span>
                     <a href={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`} target="_blank" rel="noopener noreferrer">
                       {video.snippet.title}
                     </a>
