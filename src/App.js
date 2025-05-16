@@ -10,6 +10,7 @@ import DataEngineering from './pages/DataEngineering';
 import SoftwareEngineering from './pages/SoftwareEngineering';
 import DevOpsExperience from './pages/DevOpsExperience';
 import SDLC from './pages/SDLC';
+import Pentaho from './pages/Pentaho'; // Adjust path as per your folder structure
 import ScrollToTop from './components/ScrollToTop'; // ✅ Import ScrollToTop
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/software-engineering" element={<SoftwareEngineering />} />
           <Route path="/devops-experience" element={<DevOpsExperience />} />
           <Route path="/sdlc" element={<SDLC />} />
+          <Route path="/pentaho-bi" element={<Pentaho />} /> 
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

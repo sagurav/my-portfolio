@@ -18,9 +18,9 @@ const phases = [
     title: 'Enterprise Design',
     period: 'Feb 2020 – July 2020',
     items: [
-      'Created end-to-end design documents and took signoffs (Maandhan & Swavalamban)',
-      'Created data models for Maandhana, Swavalamban and Girl Child schemes',
-      'Created designs for Integration and Pentaho ETL requirements',
+      'Created end-to-end High Level design documents and took signoff(Functional streams) )',
+      'Created data models and enterprise level schemas for 3+ functional streams',
+      'Created designs for Integration and Pentaho ETL requirements(Integration Specification document)',
     ]
   },
   {

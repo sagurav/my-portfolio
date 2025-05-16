@@ -1,3 +1,4 @@
+// ✅ Final Updated Resume.js with responsive contact links and Pentaho BI link
 import React from "react";
 import "../styles/Resume.css";
 import profilePicture from "../assests/Profile.jpg";
@@ -13,9 +14,15 @@ const Resume = () => {
           <p className="sidebar-profession"><h3>SOFTWARE ENGINEERING PROFESSIONAL</h3></p>
           <div className="sidebar-profession">
             <h2>Contact Info</h2>
-            <p>+61 - 449 700 104</p>
-            <p>sgurav0104@gmail.com</p>
-            <p>www.linkedin.com/in/suraj-adhikrao-gurav/</p>
+            <p>
+              📞 <a href="tel:+61449700104" style={{ color: "#73bbe5", textDecoration: "underline" }}>+61 - 449 700 104</a>
+            </p>
+            <p>
+              📧 <a href="mailto:sgurav0104@gmail.com" style={{ color: "#73bbe5", textDecoration: "underline" }}>sgurav0104@gmail.com</a>
+            </p>
+            <p>
+              🔗 <a href="https://www.linkedin.com/in/suraj-adhikrao-gurav/" target="_blank" rel="noopener noreferrer" style={{ color: "#73bbe5", textDecoration: "underline" }}>LinkedIn Profile</a>
+            </p>
           </div>
         </aside>
 
@@ -46,7 +53,6 @@ const Resume = () => {
 
           <section className="section experience">
             <h2>Professional Experience</h2>
-
             <div>
               <h3>Senior Software Engineer – Team Lead (Tech Mahindra, Contract) | Jul 2023 – Aug 2024</h3>
               <ul>
@@ -68,10 +74,11 @@ const Resume = () => {
           <section className="section skills">
             <h2>Technical Implementation Areas</h2>
             <ul>
-              <li><Link to="/sdlc" style={{ color: "#73bbe5", textDecoration: "underline" }}>SDLC</Link></li>
+              <li><Link to="/sdlc" style={{ color: "#73bbe5", textDecoration: "underline" }}>Software Development Life Cycle</Link></li>
               <li><Link to="/data-engineering" style={{ color: "#73bbe5", textDecoration: "underline" }}>Data Engineering and Data Analytics</Link></li>
               <li><Link to="/software-engineering" style={{ color: "#73bbe5", textDecoration: "underline" }}>Software Engineering</Link></li>
               <li><Link to="/devops-experience" style={{ color: "#73bbe5", textDecoration: "underline" }}>DevOps and Infrastructure</Link></li>
+              <li><Link to="/pentaho-bi" style={{ color: "#73bbe5", textDecoration: "underline" }}>Business Intelligence (Pentaho BI)</Link></li>
             </ul>
           </section>
 
@@ -109,11 +116,11 @@ const Resume = () => {
           <section className="section awards">
             <h2>Awards</h2>
             <ul>
-              <li>Dean's Commendation (QUT)</li>
-              <li>ACE Award (Tech Mahindra)</li>
-              <li>3x Bravo Awards</li>
-              <li>Automation Ninja Award</li>
-              <li>Letter of Appreciation – Xavier Institute</li>
+              <li>Dean's Commendation (Queensland University of Technology , Australia)</li>
+              <li>ACE Award (Tech Mahindra , India)</li>
+              <li>3x Bravo Awards (Tech Mahindra , India)</li>
+              <li>Automation Ninja Award (Tech Mahindra , India)</li>
+              <li>Letter of Appreciation – Xavier Institute of Engineering (Mumbai University, India)</li>
             </ul>
           </section>
 

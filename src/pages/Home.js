@@ -14,39 +14,31 @@ const Home = () => {
   return (
     <div className="home">
       <div className="left-column">
-        <h2>About Me</h2>
+      <h2>About Me</h2>
         <p>
-          Blending code with chords and sprints, <br />I'm a software engineer
-          whose rhythm flows through <br />
-          both innovative tech solutions and the vibrant
-          <br />
-          beats of music, while my spirit races in the thrill of sports.
+        Passionate about transforming challenges into clean, scalable code.
+          A creative technologist who blends engineering precision with artistic rhythm,
+          bringing harmony to both digital platforms and real-world solutions.
         </p>
-        <Link to="/about" className="section-link">
-          Learn more
-        </Link>
+        <Link to="/about" className="section-link highlight-button" style={{ color: '#73bbe5', textDecoration: 'underline' }}>Learn more</Link>
 
         <h2>Professional Profile</h2>
         <p>
-          Take a moment to explore my resume, <br />
-          where my passion for technology and dedication to <br />
-          excellence are vividly captured in every detail.
+          I am a passionate IT professional with a strong background in software engineering, data integration,
+          and business intelligence. With a blend of leadership and technical expertise, I design and deliver scalable,
+          secure, and innovative solutions across diverse industries. My work reflects dedication, adaptability,
+          and a continuous drive to learn and evolve. This portfolio showcases the versatility and leadership that adapts to any challenge.
         </p>
-        <Link to="/resume" className="section-link">
-          Learn more
-        </Link>
+        <Link to="/resume" className="section-link highlight-button" style={{ color: '#73bbe5', textDecoration: 'underline' }}>Explore My Resume</Link>
 
         <h2>My Work</h2>
         <p>
-          Crafting digital canvases with the same fervor as a maestro wields his
-          baton. <br />
-          I'm a passionate software engineer dedicated to <br />
-          sculpting the future of web development with every <br />
-          line of code I write.
+          Every application tells a story. From concept to deployment,
+          I architect modern, secure, and impactful solutions that scale.
+          Experience my latest work — built with purpose and passion.
         </p>
-        <Link to="/portfolio" className="section-link">
-          Learn more
-        </Link>
+        <Link to="/portfolio" className="section-link highlight-button" style={{ color: '#73bbe5', textDecoration: 'underline' }}>View Projects</Link>
+
 
         <br />
         <br />

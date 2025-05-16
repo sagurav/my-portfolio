@@ -65,7 +65,13 @@ const education = [
     label: 'Power BI Data Analyst Certification (Pursuing)',
     title: 'Power BI Data Analyst (In Progress)',
     details: 'Learning to build enterprise dashboards, write DAX queries, and use Power BI visuals to narrate impactful business stories through data. Proficient in using Power Query, Filters, and Report publishing tools.'
-  }
+  },
+
+  {
+    label: 'Learning Azure Databricks ',
+    title: 'Learning Azure Databricks ',
+    details: 'Currently acquiring in-depth knowledge of Azure Databricks for scalable data processing and doing hands-on certification on Power BI for advanced data visualization and reporting. Open and adaptive to mastering any modern ETL tools and BI platforms to meet evolving enterprise data demands.'
+  },
 ];
 
 const DataEngineering = () => {

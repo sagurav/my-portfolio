@@ -108,3 +108,8 @@
     .left-column p {
         text-align: center;
     } }
+
+        .left-column p {
+            max-width: 80ch;
+            /* or try max-width: 30vw; */
+            line-height: 1.6;     }
