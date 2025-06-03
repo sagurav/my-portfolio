@@ -32,13 +32,13 @@ const Home = () => {
 
         {/* ✅ Expertise Snapshot section before Resume */}
         <h2>Expertise Snapshot</h2>
-        <ul className="expertise-list">
-          <li><Link to="/sdlc">Software Development Life Cycle</Link></li>
-          <li><Link to="/data-engineering">Data Engineering and Data Analytics</Link></li>
-          <li><Link to="/software-engineering">Software Engineering</Link></li>
-          <li><Link to="/devops-experience">DevOps and Infrastructure</Link></li>
-          <li><Link to="/pentaho-bi">Business Intelligence (Pentaho BI)</Link></li>
-        </ul>
+       <ul>
+           <li><Link to="/sdlc" style={{ color: "#73bbe5", textDecoration: "underline" }}>Software Development Life Cycle</Link></li>
+           <li><Link to="/data-engineering" style={{ color: "#73bbe5", textDecoration: "underline" }}>Data Engineering and Data Analytics</Link></li>
+           <li><Link to="/software-engineering" style={{ color: "#73bbe5", textDecoration: "underline" }}>Software Engineering</Link></li>
+           <li><Link to="/devops-experience" style={{ color: "#73bbe5", textDecoration: "underline" }}>DevOps and Infrastructure</Link></li>
+           <li><Link to="/pentaho-bi" style={{ color: "#73bbe5", textDecoration: "underline" }}>Business Intelligence (Pentaho BI)</Link></li>
+         </ul>
 
         <Link to="/resume" className="section-link highlight-button" style={{ color: '#73bbe5', textDecoration: 'underline' }}>Explore My Resume</Link>
 
