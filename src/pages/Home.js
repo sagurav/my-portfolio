@@ -14,9 +14,9 @@ const Home = () => {
   return (
     <div className="home">
       <div className="left-column">
-      <h2>About Me</h2>
+        <h2>About Me</h2>
         <p>
-        Passionate about transforming challenges into clean, scalable code.
+          Passionate about transforming challenges into clean, scalable code.
           A creative technologist who blends engineering precision with artistic rhythm,
           bringing harmony to both digital platforms and real-world solutions.
         </p>
@@ -29,6 +29,17 @@ const Home = () => {
           secure, and innovative solutions across diverse industries. My work reflects dedication, adaptability,
           and a continuous drive to learn and evolve. This portfolio showcases the versatility and leadership that adapts to any challenge.
         </p>
+
+        {/* ✅ Expertise Snapshot section before Resume */}
+        <h2>Expertise Snapshot</h2>
+        <ul className="expertise-list">
+          <li><Link to="/sdlc">Software Development Life Cycle</Link></li>
+          <li><Link to="/data-engineering">Data Engineering and Data Analytics</Link></li>
+          <li><Link to="/software-engineering">Software Engineering</Link></li>
+          <li><Link to="/devops-experience">DevOps and Infrastructure</Link></li>
+          <li><Link to="/pentaho-bi">Business Intelligence (Pentaho BI)</Link></li>
+        </ul>
+
         <Link to="/resume" className="section-link highlight-button" style={{ color: '#73bbe5', textDecoration: 'underline' }}>Explore My Resume</Link>
 
         <h2>My Work</h2>
@@ -39,42 +50,24 @@ const Home = () => {
         </p>
         <Link to="/portfolio" className="section-link highlight-button" style={{ color: '#73bbe5', textDecoration: 'underline' }}>View Projects</Link>
 
-
-        <br />
-        <br />
-        <br />
+        <br /><br /><br />
         <h2>Follow Me</h2>
         <div className="social-icons">
-          <a
-            href="https://github.com/sagurav"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/sagurav" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a
-            href="https://linkedin.com/in/suraj-adhikrao-gurav"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://linkedin.com/in/suraj-adhikrao-gurav" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a
-            href="https://instagram.com/suraj_adhikrao_gurav"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://instagram.com/suraj_adhikrao_gurav" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a
-            href="https://facebook.com/suraj.gurav.904?mibextid=LQQJ4d"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://facebook.com/suraj.gurav.904?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </div>
       </div>
+
       <div className="right-column">
         <div className="home-profile-picture">
           <img src={profilePicture} alt="Profile" />
@@ -85,7 +78,6 @@ const Home = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 

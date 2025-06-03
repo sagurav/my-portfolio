@@ -11,7 +11,7 @@ const Resume = () => {
         <aside className="sidebar">
           <img src={profilePicture} alt="Suraj Adhikrao Gurav" className="profile-pic" />
           <h1 className="sidebar-name">Suraj Adhikrao Gurav</h1>
-          <p className="sidebar-profession"><h3>SOFTWARE ENGINEERING PROFESSIONAL</h3></p>
+          <p className="sidebar-profession"><h3>IT PROFESSIONAL</h3></p>
           <div className="sidebar-profession">
             <h2>Contact Info</h2>
             <p>

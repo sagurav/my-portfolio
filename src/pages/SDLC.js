@@ -25,7 +25,7 @@ const phases = [
   },
   {
     title: 'Development',
-    period: 'Mar 2020 – Aug 2025',
+    period: 'Mar 2020 – Present',
     items: [
       'Developed UI screens with Angular and backend APIs with Java',
       'Developed Fuse APIs for Integration',
@@ -36,7 +36,7 @@ const phases = [
   },
   {
     title: 'Testing',
-    period: 'Jun 2020 – Aug 2025',
+    period: 'Jun 2020 – Present',
     items: [
       'Created test cases for Maandhan',
       'ETL batch process testing',
@@ -45,7 +45,7 @@ const phases = [
   },
   {
     title: 'Deployment',
-    period: 'Feb 2020 – Aug 2025',
+    period: 'Feb 2020 – Present',
     items: [
       'Deployed WARs across host-to-host systems',
       'Server setup for apps (Dev to Prod DR) on AWS and RHEL 7.5',
